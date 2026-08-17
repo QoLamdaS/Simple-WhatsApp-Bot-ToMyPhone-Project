@@ -1,4 +1,9 @@
 import twilio.rest
+import dotenv
+
+dotenv.load_dotenv()  # Load environment variables from .env file
+api_key = dotenv.get_key(".env", "API_KEY")
+
 #1. Credentials
 account_sid = "YOUR_ACCOUNT_SID_HERE"
 auth_token = "YOUR_AUTH_TOKEN_HERE"
