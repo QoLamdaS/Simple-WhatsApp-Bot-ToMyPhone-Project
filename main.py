@@ -21,5 +21,5 @@ message = client.messages.create(
 )
 
 # 4. Print confirmation
-print(f"Message sent! ID: {message.sid}")
-print(f"Message sent! ID: {message.sid}")
+# print(f"Message sent! ID: {message.sid}")
+print(f"Message sent! ID: message.sid")
