@@ -1,5 +1,5 @@
 import twilio.rest
-import dotenv, os
+import dotenv
 
 dotenv.load_dotenv()  # Load environment variables from .env file
 my_account_sid = dotenv.get_key(".env", "MY_ACCOUNT_SID")
