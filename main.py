@@ -1,5 +1,5 @@
 import twilio.rest
-import dotenv
+import dotenv, os
 
 dotenv.load_dotenv()  # Load environment variables from .env file
 my_account_sid = dotenv.get_key(".env", "MY_ACCOUNT_SID")
@@ -21,5 +21,4 @@ message = client.messages.create(
 )
 
 # 4. Print confirmation
-# print(f"Message sent! ID: {message.sid}")
-print(f"Message sent! ID: message.sid")
+print(f"Message sent! ID: {message.sid}")
