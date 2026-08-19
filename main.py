@@ -1,10 +1,10 @@
 import twilio.rest
-import dotenv
+import dotenv, os
 
 dotenv.load_dotenv()  # Load environment variables from .env file
-my_account_sid = dotenv.get_key(".env", "MY_ACCOUNT_SID")
-my_auth_token = dotenv.get_key(".env", "MY_AUTH_TOKEN")
-my_whatsapp_number = dotenv.get_key(".env", "MY_WHATSAPP_NUMBER")
+my_account_sid = os.getenv("MY_ACCOUNT_SID")
+my_auth_token = os.getenv("MY_AUTH_TOKEN")
+my_whatsapp_number = os.getenv("MY_WHATSAPP_NUMBER")
 
 #1. Credentials
 account_sid = my_account_sid
