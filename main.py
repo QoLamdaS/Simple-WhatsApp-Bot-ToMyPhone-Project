@@ -13,14 +13,12 @@ auth_token = my_auth_token
 # 2. Initialize the client
 client = twilio.rest.Client(account_sid, auth_token)
 
-print(account_sid, auth_token, my_whatsapp_number)
-
 # 3. Send the message
-# message = client.messages.create(
-#     from_="whatsapp:+14155238886",  # Twilio Sandbox number
-#     to=f"whatsapp:{my_whatsapp_number}",  # Include your country code!
-#     body="Hello from my Python bot! 🚀",
-# )
+message = client.messages.create(
+    from_="whatsapp:+14155238886",  # Twilio Sandbox number
+    to=f"whatsapp:+62{my_whatsapp_number}",  # Include your country code!
+    body="Hello from my Python bot! 🚀",
+)
 
-# # 4. Print confirmation
-# print(f"Message sent! ID: {message.sid}")
+# 4. Print confirmation
+print(f"Message sent! ID: {message.sid}")
