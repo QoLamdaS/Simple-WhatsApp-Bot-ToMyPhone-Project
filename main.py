@@ -14,11 +14,3 @@ auth_token = my_auth_token
 client = twilio.rest.Client(account_sid, auth_token)
 
 # 3. Send the message
-message = client.messages.create(
-    from_="whatsapp:+14155238886",  # Twilio Sandbox number
-    to=f"whatsapp:+62{my_whatsapp_number}",  # Include your country code!
-    body="Hello from my Python bot! 🚀",
-)
-
-# 4. Print confirmation
-print(f"Message sent! ID: {message.sid}")
